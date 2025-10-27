@@ -1,9 +1,7 @@
-﻿using Microsoft.Win32;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
+﻿using Light_Switch.Properties;
+using Microsoft.Win32;
 
-namespace LightSwitch.Services
+namespace Light_Switch.Services
 {
 	internal class ThemeService
 	{
@@ -64,7 +62,8 @@ namespace LightSwitch.Services
 			}
 
 			PreferencesService.SaveCurrentThemeName("Light");
-		}
+            ThemeHelper.NotifyThemeChanged();
+        }
 
 		private void SetDark()
 		{
@@ -89,6 +88,7 @@ namespace LightSwitch.Services
 			}
 
 			PreferencesService.SaveCurrentThemeName("Dark");
+			ThemeHelper.NotifyThemeChanged();
 		}
 
 		private static void SetAppTheme(bool light) => PersonalizeKey.SetValue("AppsUseLightTheme", light ? 1 : 0, RegistryValueKind.DWord);

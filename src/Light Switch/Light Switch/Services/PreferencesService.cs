@@ -1,7 +1,7 @@
-﻿using LightSwitch.Models;
-using LightSwitch.Properties;
+﻿using Light_Switch.Models;
+using Light_Switch.Properties;
 
-namespace LightSwitch.Services
+namespace Light_Switch.Services
 {
 	internal class PreferencesService
 	{

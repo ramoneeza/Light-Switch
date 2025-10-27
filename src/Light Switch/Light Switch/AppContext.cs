@@ -1,9 +1,8 @@
-﻿using LightSwitch.Services;
-using LightSwitch.Forms;
-using System;
-using System.Windows.Forms;
+﻿using Light_Switch.Forms;
+using Light_Switch.Properties;
+using Light_Switch.Services;
 
-namespace LightSwitch
+namespace Light_Switch
 {
 	internal class AppContext : ApplicationContext
 	{
@@ -47,6 +46,7 @@ namespace LightSwitch
 		private void OnApplicationExit(object sender, EventArgs e)
 		{
 			NotifyIcon.Visible = false;
+			NotifyIcon.Dispose();
 		}
 
 		private void OnNotifyIconClick(object sender, MouseEventArgs e)

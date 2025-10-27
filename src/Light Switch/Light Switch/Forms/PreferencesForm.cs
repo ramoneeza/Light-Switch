@@ -1,12 +1,8 @@
-﻿using LightSwitch.Services;
-using LightSwitch.Models;
-using System;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
+﻿using System.Diagnostics;
+using Light_Switch.Models;
+using Light_Switch.Services;
 
-namespace LightSwitch.Forms
+namespace Light_Switch.Forms
 {
 	public partial class PreferencesForm : Form
 	{
@@ -23,7 +19,7 @@ namespace LightSwitch.Forms
 			OldPreferences = PreferencesService.GetPreferences();
 			NewPreferences = OldPreferences;
 
-			lblVersion.Text = Application.ProductVersion;
+			lblVersion.Text = new string(Application.ProductVersion.TakeWhile(c=>c!='+').ToArray());
 
 			rbnSystemEnabled.Checked = OldPreferences.IsSystemThemeEnabled;
 			rbnSystemDisabled.Checked = !OldPreferences.IsSystemThemeEnabled;
@@ -188,7 +184,8 @@ namespace LightSwitch.Forms
 
 		private void llbGitHub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
 		{
-			Process.Start(new ProcessStartInfo("https://github.com/wireless-r/Light-Switch") { UseShellExecute = true });
-		}
+        //Process.Start(new ProcessStartInfo("https://github.com/wireless-r/Light-Switch") { UseShellExecute = true });
+        Process.Start(new ProcessStartInfo("https://github.com/ramoneeza/Light-Switch") { UseShellExecute = true });
+        }
 	}
 }

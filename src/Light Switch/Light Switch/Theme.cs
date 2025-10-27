@@ -1,4 +1,4 @@
-﻿namespace LightSwitch
+﻿namespace Light_Switch
 {
 	internal sealed class Theme : TypeSafeEnum
 	{

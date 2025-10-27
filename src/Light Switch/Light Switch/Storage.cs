@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.IO;
-using System.Linq;
+﻿using System.Diagnostics.CodeAnalysis;
 
-namespace LightSwitch
+namespace Light_Switch
 {
 	internal class Storage : TypeSafeEnum
 	{

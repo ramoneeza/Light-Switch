@@ -1,6 +1,4 @@
-﻿using System.Drawing;
-
-namespace LightSwitch.Models
+﻿namespace Light_Switch.Models
 {
 	class Preferences
 	{

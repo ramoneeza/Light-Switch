@@ -1,8 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-
-namespace LightSwitch.Forms
+﻿namespace Light_Switch.Forms
 {
 	/// <summary>
 	/// MainForm's purpose is to handle close message from external sender.

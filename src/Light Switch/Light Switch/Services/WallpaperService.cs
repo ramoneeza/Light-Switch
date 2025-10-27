@@ -1,8 +1,7 @@
-﻿using Microsoft.Win32;
-using System.Drawing;
-using System.Runtime.InteropServices;
+﻿using System.Runtime.InteropServices;
+using Microsoft.Win32;
 
-namespace LightSwitch.Services
+namespace Light_Switch.Services
 {
 	internal class WallpaperService
     {

@@ -1,7 +1,5 @@
-using System;
 using System.Windows.Forms;
-
-namespace LightSwitch
+namespace Light_Switch
 {
 	internal static class Program
 	{
@@ -11,7 +9,8 @@ namespace LightSwitch
 		[STAThread]
 		static void Main()
 		{
-			Application.Run(new AppContext());
+            ApplicationConfiguration.Initialize();
+            Application.Run(new AppContext());
 		}
 	}
 }

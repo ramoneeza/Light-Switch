@@ -1,46 +1,44 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
+	
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows10.0.17763.0</TargetFramework>
+    <TargetFramework>net9.0-Windows</TargetFramework>
+	<Nullable>Enable</Nullable>
+	<ImplicitUsings>Enable</ImplicitUsings>
     <UseWindowsForms>true</UseWindowsForms>
-    <StartupObject>LightSwitch.Program</StartupObject>
-    <ApplicationIcon>Resources\Icon_LightMode.ico</ApplicationIcon>
-    <NoWin32Manifest>true</NoWin32Manifest>
-    <RootNamespace>LightSwitch</RootNamespace>
-    <AssemblyName>Light Switch</AssemblyName>
-    <Version>2.3</Version>
-    <Product>Light Switch</Product>
-    <Authors>Light Switch</Authors>
-    <PackageId>LightSwitch</PackageId>
-    <PackageProjectUrl>https://github.com/wireless-r/Light-Switch</PackageProjectUrl>
+    <ApplicationIcon>Arte\Icon_LightMode.ico</ApplicationIcon>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Update="Properties\Settings.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Update="Resources.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Update="Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-
+	<PropertyGroup>
+		<Version>1.0.0</Version>
+		<AssemblyInformationalVersion>1.0.0</AssemblyInformationalVersion>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6" />
+		<PackageReference Include="Rop.Winforms9.Basic" Version="1.0.8" />
+		<PackageReference Include="Rop.Winforms9.DuotoneIcons.MaterialDesign" Version="1.2.11" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Compile Update="Properties\Resources.Designer.cs">
+	    <DesignTime>True</DesignTime>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Resources.resx</DependentUpon>
+	  </Compile>
+	  <Compile Update="Properties\Settings.Designer.cs">
+	    <DesignTimeSharedInput>True</DesignTimeSharedInput>
+	    <AutoGen>True</AutoGen>
+	    <DependentUpon>Settings.settings</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+	<ItemGroup>
+	  <EmbeddedResource Update="Properties\Resources.resx">
+	    <Generator>ResXFileCodeGenerator</Generator>
+	    <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+	  </EmbeddedResource>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="Properties\Settings.settings">
+	    <Generator>SettingsSingleFileGenerator</Generator>
+	    <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+	  </None>
+	</ItemGroup>
 </Project>
