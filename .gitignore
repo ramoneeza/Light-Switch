@@ -338,3 +338,9 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+
+# Configuración de publicación ClickOnce
+*.pfx
+*.publishsettings
+*.csproj.user
+Properties/PublishProfiles/
